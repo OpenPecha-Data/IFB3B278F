@@ -1,0 +1,639 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1178' accesskey='1'>RK: Bodhisatvapiṭaka</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>RK: Bodhisatvapiṭaka<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6308]" value="6308" id="lancheckbox" checked >Sanskrit: San Ms</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6309]" value="6309" id="lancheckbox" checked >Chinese: Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6310]" value="6310" id="lancheckbox" checked >Chinese: Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6312]" value="6312" id="lancheckbox" checked >Tibetan: Tib Dunhuang Pelliot 977</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6313]" value="6313" id="lancheckbox" checked >Tibetan: Tib Kg dkon brtsegs kha</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6311]" value="6311" id="lancheckbox" checked >English: Eng</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1178">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1178">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1178'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1178">Search in RK: Bodhisatvapiṭaka</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1178'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1178'>RK: Bodhisatvapiṭaka</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="154731.Title|154732.Preface|154733.Chapter1:Gṛhapati|154743.Chapter2:Kimbhīrayakṣa|154744.Chapter3:Bodhisatvaparīkṣā|154745.Chapter4:Tathāgatācintya|154746.Chapter5:Caturbrahmavihāra|154747.Chapter6:Dānapāramitā|154748.Chapter7:Śīlapāramitā|154749.Chapter8:Kṣāntipāramitā|154750.Chapter9:Vīryapāramitā|154751.Chapter10:Dhyānapāramitā|154752.Chapter11:Prajñāpāramitā|154753.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154731.Title" border=0 hspace=2><a id="href_154731.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993269&level=1&cid=877711" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154732.Preface" border=0 hspace=2><a id="href_154732.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993270&level=1&cid=877712" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('154733.Chapter1:Gṛhapati','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_154733.Chapter1:Gṛhapati" border=0 hspace=2><a id="href_154733.Chapter1:Gṛhapati" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993271&level=1&cid=877713" class="ajax_tree0">Chapter 1: Gṛhapati
+</td></tr></table>
+<div style="display:none;"  id="div_154733.Chapter1:Gṛhapati">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154734.Folio2a" border=0 hspace=2><a id="href_154734.Folio2a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993287&level=2&cid=877717" class="ajax_tree1">Folio 2a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154735.Folio2b" border=0 hspace=2><a id="href_154735.Folio2b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993304&level=2&cid=877720" class="ajax_tree1">Folio 2b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154736.Folio3a" border=0 hspace=2><a id="href_154736.Folio3a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993315&level=2&cid=877722" class="ajax_tree1">Folio 3a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154737.Folio3b" border=0 hspace=2><a id="href_154737.Folio3b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993354&level=2&cid=877733" class="ajax_tree1">Folio 3b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154738.Folio4a" border=0 hspace=2><a id="href_154738.Folio4a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993386&level=2&cid=877765" class="ajax_tree1">Folio 4a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154739.Folio4b" border=0 hspace=2><a id="href_154739.Folio4b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993430&level=2&cid=877809" class="ajax_tree1">Folio 4b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154740.Folio5a" border=0 hspace=2><a id="href_154740.Folio5a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993480&level=2&cid=877859" class="ajax_tree1">Folio 5a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154741.Folio5b" border=0 hspace=2><a id="href_154741.Folio5b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993494&level=2&cid=877873" class="ajax_tree1">Folio 5b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154742.Folio6a" border=0 hspace=2><a id="href_154742.Folio6a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993505&level=2&cid=877875" class="ajax_tree1">Folio 6a
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154743.Chapter2:Kimbhīrayakṣa" border=0 hspace=2><a id="href_154743.Chapter2:Kimbhīrayakṣa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993552&level=1&cid=877882" class="ajax_tree0">Chapter 2: Kimbhīrayakṣa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154744.Chapter3:Bodhisatvaparīkṣā" border=0 hspace=2><a id="href_154744.Chapter3:Bodhisatvaparīkṣā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993554&level=1&cid=877884" class="ajax_tree0">Chapter 3: Bodhisatvaparīkṣā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154745.Chapter4:Tathāgatācintya" border=0 hspace=2><a id="href_154745.Chapter4:Tathāgatācintya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993556&level=1&cid=877886" class="ajax_tree0">Chapter 4: Tathāgatācintya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154746.Chapter5:Caturbrahmavihāra" border=0 hspace=2><a id="href_154746.Chapter5:Caturbrahmavihāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993558&level=1&cid=877888" class="ajax_tree0">Chapter 5: Caturbrahmavihāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154747.Chapter6:Dānapāramitā" border=0 hspace=2><a id="href_154747.Chapter6:Dānapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993561&level=1&cid=877890" class="ajax_tree0">Chapter 6: Dānapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154748.Chapter7:Śīlapāramitā" border=0 hspace=2><a id="href_154748.Chapter7:Śīlapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993563&level=1&cid=877892" class="ajax_tree0">Chapter 7: Śīlapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154749.Chapter8:Kṣāntipāramitā" border=0 hspace=2><a id="href_154749.Chapter8:Kṣāntipāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993565&level=1&cid=877894" class="ajax_tree0">Chapter 8: Kṣāntipāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154750.Chapter9:Vīryapāramitā" border=0 hspace=2><a id="href_154750.Chapter9:Vīryapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993567&level=1&cid=877896" class="ajax_tree0">Chapter 9: Vīryapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154751.Chapter10:Dhyānapāramitā" border=0 hspace=2><a id="href_154751.Chapter10:Dhyānapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993569&level=1&cid=877898" class="ajax_tree0">Chapter 10: Dhyānapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154752.Chapter11:Prajñāpāramitā" border=0 hspace=2><a id="href_154752.Chapter11:Prajñāpāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993576&level=1&cid=877905" class="ajax_tree0">Chapter 11: Prajñāpāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154753.Colophon" border=0 hspace=2><a id="href_154753.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993612&level=1&cid=877941" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('154736.Folio3a|154733.Chapter1:Gṛhapati|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1178&amp;mid=1993315&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178&amp;cid=877722&amp;mid=1993315&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178&amp;cid=877722&amp;mid=1993315&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><div class='kilderef' id='8962271'></div><div class='clear'></div><span id='8962271bi' class='verse'>
+							yathā mayā pūrvvaśruto jinasya lakṣmīś ca kīrttiś ca yaśaś ca rūpaṃ |<br />tad uttarī paśyāmi <a class='fotnote cn' name='FN6308cn1' href='#N6308cn1'><sup>1</sup></a>
+ bhāsamānaṃ śriyānvitaṃ yādṛśu svarṇabimbaṃ ||&nbsp;</span><span id='8962272bi' class='verse'>
+						 prāsādikaṃ rūpan tu darśanīyaṃ suvarṇavarṇena samucchrayeṇa |<br />virājase bhikṣugaṇasya madhye nakṣatramadhye iva keturājaḥ ||&nbsp;</span><span id='8962273bi' class='verse'>
+						 pūrvan na paśyāmi narottamasya paśyāmi abhyudgatamerukalpaṃ |<br />uṣṇīṣamūrdhe yathādevacchatraṃ samantapariṇamita ānupūrvvaṃ ||&nbsp;</span><span id='8962274bi' class='verse'>
+						 śīrṣe mṛdusnigdhaśiroruhāṇi yathendranīlāṃjanavarṇatulyāḥ |<br />paśyāmi morasya yathaiva grīvā pradakṣiṇāvarttasukomalāni ||&nbsp;</span><span id='8962275bi' class='verse'>
+						 samaṃ lalāṭaṃ vadatām varasya indrāyudhatulya tavā bhramūrttiḥ |<br />bhrūmadhyi ūrṇā virajā vibhāti prabhāsvarā tārakarājatulyā ||&nbsp;</span><span id='8962276bi' class='verse'>
+						 netrā tava prītikarā sunetra janasya kāntipriyadarśanāni |<br />tṛptin na gacchāmy ahu prekṣamāṇo viśuddhanetraṃ praṇato smi nāthaṃ ||&nbsp;</span><span id='8962277bi' class='verse'>
+						 paśyāmi nāsāṃ puruṣotta<ma>sya samānupūrvyā yatha svarṇaśṛṅgaṃ |<br /> oṣṭhaṃ ca bimbaṃ yatha vidrumo vā viśuddhaśuddhaṃ maṇiratnatulyaṃ ||&nbsp;</span><span id='8962278bi' class='verse'>
+						 dantāḥ prabhāsanti prapāṇḍurāṇi mṛṇālagokṣīrabalākatulyāḥ<br /> dṛḍhā acchidrāḥ sahitāḥ suśuddhā bhrājanti dantā damathe ratasya ||&nbsp;</span><span id='8962279bi' class='verse'>
+						 dantānudantāntarasupragūḍhā daṃṣṭrā jinasyo virajā vibhānti |<br /> hansāvalīmadhyagatā viśuddhāḥ śuklāḥ suśuklā iva hansarājāḥ ||&nbsp;</span><span id='8962280bi' class='verse'>
+						 viśuddharaktotpalatāmravarṇā bālārkaraktā maṇiśuddhavarṇā |<br /> tanuḥ prabhūtā ’vihatā viśālā cchādeti vaktraṃ sugatasya jihvā ||&nbsp;</span><span id='8962281bi' class='verse'>
+						 na co mayā kaści śruto va dṛṣṭo sabrahmaloke api devamānuṣe |<br /> karṇā sujātā yatha gautamasya siṃhāhanū siṃhaviśāradaś ca ||&nbsp;</span><span id='8962282bi' class='verse'>
+						 paśyāmi kaṇṭhā sugatānubhāvād rasāhāriṇī śuddhaprabhāsvarā{ṇi} |<br /> ṛjumadhyagāś ca kūṭilāpanītā rasārasāgrā naradevadeva ||&nbsp;</span><span id='8962283bi' class='verse'>
+						 suvṛttaskandho si ciḍāntarānsaḥ saptocchado viśrutasarvvaloke |<br /> lakṣmyāgratejena narendragarbha ravir yathā bhāsati śailamūrdhni ||&nbsp;</span><span id='8962284bi' class='verse'>
+						 dvāv utsadau pādatale ’bhijātau dvau hastajātau dvaya ansajātau |<br /> ekotsado pṛṣṭhatu grīvam ekaḥ prapūraṇī śuddhaprabhāsvarā śubhā ||&nbsp;</span><span id='8962285bi' class='verse'>
+						 pralaṃbabāhur bhagavāṃ hi gautamo yathaiva nāgādhipatisya śuṇḍā |<br /> anonamanthā ubhaye karebhiḥ spṛśesi jānūni ubhe karebhiḥ ||&nbsp;</span><span id='8962286bi' class='verse'>
+						 siṃho va pūrvārdhapravṛddhakāyo nyagrodhaparimaṇḍalatulyakāyaḥ<br /> nārāyaṇaḥ saṃhatanaḥ śarīro mahābalaḥ kṣāntibalair upetaḥ ||&nbsp;</span><span id='8962287bi' class='verse'>
+						 urddhvāṅgaromāṇi pradakṣiṇāni ekaikajātāni sukomalāni |<br /> rajena dhūmena [vā] nopaliptā jaleruhaṃ paṅkajalair yatheva ||&nbsp;</span><span id='8962288bi' class='verse'>
+						 suguptakośaṃ kila vastiguhyaṃ yathaiva dāntasya hayottamasya |<br /> suvarttitoru śaragarbhatulyā jaṃghā tavaḥ saṃsthita-ānupūrvvam* ||&nbsp;</span><span id='8962289bi' class='verse'>
+						 utsaṅgapādāyatapādapārṣṇir jālāvanaddhau tava hastapādau |<br /> dīrghāṃguliś co samaviṅśadaṅgulis tāmranakhāḥ puṣpanakhāṅguliś ca ||&nbsp;</span><span id='8962290bi' class='verse'>
+						 adhaḥkrame te varacakralakṣaṇā sahasram ākāraprabhāsvarāṇi |<br /> na gulphāṅgulenādhvani pātayāsi na co mahīn nikṣipase kramāṇi ||&nbsp;</span><span id='8962291bi' class='verse'>
+						 susaṃspṛśaṃto [ca]turaṅgulena ' vasundharāṃ gacchasi lokajyeṣṭha |<br /> padmāś ca ratnāmaya saṃbhavanti yatra kramān nikṣipase tvam adbhutaṃ ||&nbsp;</span><span id='8962292bi' class='verse'>
+						 anuddhatā vāraṇadhīravikramā śārdūladevendragatiḥ parākramā |<br /> gatis tavā vīra yathā na kasyacit salīlagāmī vrajase acchaṃbhiḥ ||&nbsp;</span><span id='8962293bi' class='verse'>
+						 divyāni puṣpāṇi pravarṣayanti saṃgītiśabdan tada antarīkṣe |<br /> amanuṣyā pūjāṃ bhavataḥ karonti ime dṛśā adbhutaprātihāryāḥ ||&nbsp;</span><span id='8962294bi' class='verse'>
+						 rūpaṃ tavā vaiśrava(MS: ma; tib. rnam thos bu)ṇātirekaṃ tejo na ādityaśatair viśiṣya[te |<br /> sa]brahmakaṃ loku sadevamānuṣaṃ samaṃ bhavaṃ nāsti kutottari syāt* ||&nbsp;</span><span id='8962295bi' class='verse'>
+						 tasyo mamā saṃśayitaṃ bhavāti paśyitva me uttariprātihāryaṃ |<br /> katamān guṇān uttari paśyamānopamantrikaḥ pravrajito narendraḥ ||&nbsp;</span><span id='8962296bi' class='verse'>
+						 atha khalu bhagavān bhadrapālaṃ śreṣṭhinaṃ gṛhapatim etad avocat* |&nbsp;</span><span id='8962297bi' class='verse'>
+						 upadrutaṃ batedaṃ gṛhapate lokasanniveśaṃ dṛṣṭvā daśabhir upadravaiḥ&nbsp;</span><span id='8962298bi' class='verse'>
+						 katamair daśabhir&nbsp;</span><span id='8962299bi' class='verse'>
+						 yad idaṃ jātyupadraveṇa |&nbsp;</span><div style='' id='1' class='note cn'>1.<a class="internt" name='N6308cn1' href='#FN6308cn1'> MS paśyasi, emended on the basis of Chinese 781c5-6 and the general syntax and meaning</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><div class='kilderef' id='8962625'></div><div class='clear'></div><span id='8962625bi' class='verse'>
+							我昔曾聞最勝尊　吉祥妙色大名稱<br /> 今覩威光勝所聞　如眞金像備衆徳&nbsp;</span><span id='8962626bi' class='verse'>
+						 如來色像喩金山　高廣嚴淨觀無厭<br />威徳莊嚴苾芻衆　猶如滿月處衆星&nbsp;</span><span id='8962627bi' class='verse'>
+						 世尊頂相無能見　高顯映發踰山王<br />頂髻周圓漸次歛　其相平偃猶天蓋&nbsp;</span><span id='8962628bi' class='verse'>
+						 紺髮軟膩而右旋　如安繕色帝青寶<br />鮮淨光踰孔雀項　我今瞻仰無厭足&nbsp;</span><span id='8962629bi' class='verse'>
+						 面貌端嚴額平正　眉相皎淨若天弓<br />白毫映徹無瑕穢　光潔照曜如星王&nbsp;</span><span id='8962630bi' class='verse'>
+						 發喜淨眼甚微妙　衆覩皆生欣樂心<br />我今奉觀無暫捨　頂禮淨眼世間依&nbsp;</span><span id='8962631bi' class='verse'>
+						 鼻相高平修旦直 漸廣圓成如鑄金<br />脣相丹暉極清淨 喩頻婆果末尼等&nbsp;</span><span id='8962632bi' class='verse'>
+						 妙齒鮮白含光潤　等鶴牛乳蓮華根<br />堅密齊平極明淨　調順奢摩他所感&nbsp;</span><span id='8962633bi' class='verse'>
+						 齒及隨齒根深固 斷際上下皆齊整<br />佛牙光白最超勝 如彼鴈行王處中&nbsp;</span><span id='8962634bi' class='verse'>
+						 善逝廣長之舌相 覆面薄淨如蓮華<br /> 赤銅赤色末尼寶 含暉皎鏡如初日&nbsp;</span><span id='8962635bi' class='verse'>
+						 世尊耳相極端嚴 梵世天人不聞見<br />喬答摩種狻猊頷 無畏猶如師子王&nbsp;</span><span id='8962636bi' class='verse'>
+						 我觀善逝咽喉相 能引世間甘露味<br />清淨映徹無瑕穢 具大神力不思議<br /> 頸前横約修＊旦直 處中都無孅雜文<br />現人中勝天中天 恒食味中第一味&nbsp;</span><span id='8962637bi' class='verse'>
+						 肩膊充圓悉成滿 胸臆雄猛威容盛<br /> 人中尊相世未聞 如山頂日光流照&nbsp;</span><span id='8962638bi' class='verse'>
+						 手足兩肩及項後 七處光淨恒平滿&nbsp;</span><span id='8962639bi' class='verse'>
+						 修臂傭圓象王鼻 雙掌垂下摩于膝&nbsp;</span><span id='8962640bi' class='verse'>
+						 上身廣厚如獸王 瞿陀樹相周圓滿<br />那羅延力合成身 具足大力及忍力&nbsp;</span><span id='8962641bi' class='verse'>
+						 無垢身毛皆上靡 隨現一孔一毛生<br />煙塵不汚如蓮華 右旋相成而細軟&nbsp;</span><span id='8962642bi' class='verse'>
+						 我昔傳聞隱密相 陰藏深如天馬王<br />髀腨周圓漸次斂 其相猶如天鹿王&nbsp;</span><span id='8962643bi' class='verse'>
+						 足厚隆起跟圓長 手相網鞔如鴈王<br />平滿孅長二十指 赤銅甲色如蓮華&nbsp;</span><span id='8962644bi' class='verse'>
+						 雙跖千輻金輪相 光淨微妙具莊嚴<br />如來遊歩於世間 瞿拉坡相不相觸&nbsp;</span><span id='8962645bi' class='verse'>
+						 去地四指蹈空行 衆寶紅蓮隨足現&nbsp;</span><span id='8962646bi' class='verse'>
+						 顧視安行象王歩 進趣端肅如天主<br />大聖威嚴無所畏 處衆踰於師子王<br />&nbsp;</span><span id='8962647bi' class='verse'>
+						 行住說法度眾生 天仙龍神咸恭敬<br />或散天華奏天樂 紛然繁會滿虛空&nbsp;</span><span id='8962648bi' class='verse'>
+						 妙色映蔽毘沙門 威光超勝百千日<br/>梵世天人尚無等 何況出過如來者&nbsp;</span><span id='8962649bi' class='verse'>
+						 今睹世尊大神變 故我竊懷疑惑心<br/>本觀何等勝功德 出家趣於無上道&nbsp;</span><span id='8962650bi' class='verse'>
+						 爾時世尊告賢守長者曰。&nbsp;</span><span id='8962651bi' class='verse'>
+						 長者當知。我觀世 間一切衆生。爲十苦事之所逼迫。&nbsp;</span><span id='8962652bi' class='verse'>
+						 何謂爲十。&nbsp;</span><span id='8962653bi' class='verse'>
+						 一者生苦逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><div class='kilderef' id='8962979'></div><div class='clear'></div><span id='8962979bi' class='verse'>
+							如我昔聞佛世尊　名稱吉祥及威德<br />最上妙相我今觀　殊勝光明具如是&nbsp;</span><span id='8962980bi' class='verse'>
+						 清淨妙好真金相　金色高勝眾所觀<br />離塵無染處眾中　如眾星中妙月現&nbsp;</span><span id='8962981bi' class='verse'>
+						 我昔歸命人中尊　　如須彌山極高勝<br />猶天妙蓋頂相嚴　　周遍次第而普覆&nbsp;</span><span id='8962982bi' class='verse'>
+						 頂骨首髮軟復滑　　同彼帝青妙色相<br />頸相猶如孔雀王　　右旋宛轉而柔軟&nbsp;</span><span id='8962983bi' class='verse'>
+						 額廣平正復潔白　　雙眉猶如帝釋弓<br />眉間毫相淨復明　　如星中王善照曜&nbsp;</span><span id='8962984bi' class='verse'>
+						 兩目善妙喜愛相 睹者咸生歡悅意<br />諦觀不起厭足心 頂禮世尊清淨目&nbsp;</span><span id='8962985bi' class='verse'>
+						 我睹人中尊鼻相 隆高修直如金山<br />唇如琥珀類頻婆 清淨復如淨珠寶&nbsp;</span><span id='8962986bi' class='verse'>
+						 齒相明淨復潔白　　如乳如藕及如鴨<br />堅牢清淨密復齊　　隨所動轉而善愛&nbsp;</span><span id='8962987bi' class='verse'>
+						 大小諸齒密不厚 四牙鋒利而無垢<br />猶如鵝王處鵝群 光瑩清淨白中白&nbsp;</span><span id='8962988bi' class='verse'>
+						 面如初日淨光照 赤優缽羅及銅色<br />舌相淨妙而廣長 遍覆面門悉清淨&nbsp;</span><span id='8962989bi' class='verse'>
+						 我於天人梵世中 未嘗見佛妙相好<br />耳輪猶如師子王 具師子相善無畏&nbsp;</span><span id='8962990bi' class='verse'>
+						 我觀喉相具威德 善納眾味淨光明<br />正直頸項無曲邪 常得味中之上味&nbsp;</span><span id='8962991bi' class='verse'>
+						 容儀敦肅而殊妙 七處平滿世所聞<br />最勝吉祥人中尊 如日光明現峰頂&nbsp;</span><span id='8962992bi' class='verse'>
+						 七處平滿其所謂 二手足心及二肩<br />一頸平滿七處同 圓具清淨而明煥&nbsp;</span><span id='8962993bi' class='verse'>
+						 雙臂修直復傭圓 其猶龍王妙清淨<br />無高無下二臂同 雙垂二臂立過膝&nbsp;</span><span id='8962994bi' class='verse'>
+						 上半身如師子王 如尼拘陀身圓滿<br />猶那羅延不壞身 大力忍力皆具足&nbsp;</span><span id='8962995bi' class='verse'>
+						 身毛上靡而柔軟 彼一一毛皆右旋<br />塵翳不染淨妙身 譬彼蓮花不著水&nbsp;</span><span id='8962996bi' class='verse'>
+						 陰藏隱覆而復密 猶如調善妙馬王<br />雙髀其猶軟草同 雙[月*耑]次第而安住&nbsp;</span><span id='8962997bi' class='verse'>
+						 足跟平滿趺相稱 手足皆具網鞔相<br />復如鵝王指纖長 手足數周二十指[<br />手指纖長赤銅甲 諸指柔毛而下覆&nbsp;</span><span id='8962998bi' class='verse'>
+						 足下圓具千輻輪 踝骨不麤而不現<br />履步平滿無高下&nbsp;</span><span id='8962999bi' class='verse'>
+						 行時離地及四指<br />世間最勝妙相圓 按地寶蓮隨足蹈&nbsp;</span><span id='8963000bi' class='verse'>
+						 世尊行步大無畏 如師子王無高下<br />不遲不速處中平 遊戲自在無恐畏&nbsp;</span><span id='8963001bi' class='verse'>
+						 諸天雨眾微妙花 空中競奏妙音樂<br />非人供養啟恭虔 此佛神通希有相&nbsp;</span><span id='8963002bi' class='verse'>
+						 色相超越毘沙門 威光勝踰百千日<br/>天人魔梵諸眾中 悉無如是勝功德&nbsp;</span><span id='8963003bi' class='verse'>
+						 今我內心起疑念　　佛具最上神通力<br/>復見何等功德門　　故佛出家成聖果&nbsp;</span><span id='8963004bi' class='verse'>
+						 爾時世尊告賢護等諸長者言。&nbsp;</span><span id='8963005bi' class='verse'>
+						 諸長者。我見十種諸嬈亂法世間合集。斯苦甚大。&nbsp;</span><span id='8963006bi' class='verse'>
+						 何等爲 十。&nbsp;</span><span id='8963007bi' class='verse'>
+						 一者生爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><div class='kilderef' id='8963687'></div><div class='clear'></div><span id='8963687bi' class='verse'>
+							&nbsp;</span><span id='8963688bi' class='verse'>
+						 &nbsp;</span><span id='8963689bi' class='verse'>
+						 &nbsp;</span><span id='8963690bi' class='verse'>
+						 &nbsp;</span><span id='8963691bi' class='verse'>
+						 &nbsp;</span><span id='8963692bi' class='verse'>
+						 &nbsp;</span><span id='8963693bi' class='verse'>
+						 &nbsp;</span><span id='8963694bi' class='verse'>
+						 &nbsp;</span><span id='8963695bi' class='verse'>
+						 &nbsp;</span><span id='8963696bi' class='verse'>
+						 &nbsp;</span><span id='8963697bi' class='verse'>
+						 &nbsp;</span><span id='8963698bi' class='verse'>
+						 &nbsp;</span><span id='8963699bi' class='verse'>
+						 &nbsp;</span><span id='8963700bi' class='verse'>
+						 &nbsp;</span><span id='8963701bi' class='verse'>
+						 &nbsp;</span><span id='8963702bi' class='verse'>
+						 &nbsp;</span><span id='8963703bi' class='verse'>
+						 &nbsp;</span><span id='8963704bi' class='verse'>
+						 &nbsp;</span><span id='8963705bi' class='verse'>
+						 &nbsp;</span><span id='8963706bi' class='verse'>
+						 &nbsp;</span><span id='8963707bi' class='verse'>
+						 &nbsp;</span><span id='8963708bi' class='verse'>
+						 &nbsp;</span><span id='8963709bi' class='verse'>
+						 &nbsp;</span><span id='8963710bi' class='verse'>
+						 &nbsp;</span><span id='8963711bi' class='verse'>
+						 &nbsp;</span><span id='8963712bi' class='verse'>
+						 &nbsp;</span><span id='8963713bi' class='verse'>
+						 &nbsp;</span><span id='8963714bi' class='verse'>
+						 &nbsp;</span><span id='8963715bi' class='verse'>
+						 &nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><div class='kilderef' id='8964041'></div><div class='clear'></div><span id='8964041bi' class='verse'>
+							| rgyal ba’i dpal dang grags dang gzugs dag ni |<br />| sngon chad bdag gis ji skad thos pa bas |<br />| de bas lhag par gser gyi gzugs bzhin du |<br />| mdzes dang ldan par lham mer rab tu gda’ |&nbsp;</span><span id='8964042bi' class='verse'>
+						 gzugs ni shin tu mdzes shing blta na sdug ||<br />sku yi kha dog gser gyi mdog ’dra bas ||<br />skar mang dag gi dbus na zla ba ltar ||<br />dge slong mang po’i dbus na mdzes par mdzad ||&nbsp;</span><span id='8964043bi' class='verse'>
+						 mi mchog gi ni spyi bo bltar mi gda’ ||<br />ri rab bzhin du mngon par ’phags (7) par gda’ ||<br />gtsug gi spyi bo lha yi gdugs bzhin du ||<br />kun nas byin gyis gzhol bar gyur pa lags ||&nbsp;</span><span id='8964044bi' class='verse'>
+						 dbu yi skra ni ’jam zhing rab mnyen la ||<br />a na nga rnyil dang stang zil kha dog ’dra ||<br />nyas su ’khyil la shin tu ’jam pa ste ||<br />rma bya’i mgrin pa ji bzhin nyid du gda’ ||&nbsp;</span><span id='8964045bi' class='verse'>
+						 smra ba mchog gi dpral ba shin tu mnyam ||<br />khyod kyi smin tshugs ’ja’ khugs lta bu ste ||<br />’od gsal ba ni skar ma’i rgyal po ltar ||<br />rdul bral smin mtshams spu ni shin tu mdzes ||&nbsp;</span><span id='8964046bi' class='verse'>
+						 spyan bzang khyod kyi spyan ni dgar ’gyur ba ||<br />’gro ba rnams la mdzes shing mthong na dga’ ||<br />bdag ni lta bas ngoms par mi ’gyur te ||<br />mgon po rnam dag spyan la bdag phyag ’tshal ||&nbsp;</span><span id='8964047bi' class='verse'>
+						 skyes bu dam pa’i shangs ni byin gyis mnyam ||<br />ji ltar gser gyi ri ltar rab tu gda’ ||<br />khyod kyi sgros ni bim ba byi ru bzhin ||<br />dag cing rnam dag nor bu rin chen ’dra ||&nbsp;</span><span id='8964048bi' class='verse'>
+						 dul la dgyes pa’i tshems ni mdzes pa ste ||<br />snang bar byed pa rab tu dkar ba’i tshems ||<br />padma’i rtsa ba ba zho chu skyar ’dra ||<br />sra zhing dam la thags bzangs shin tu dag |&nbsp;</span><span id='8964049bi' class='verse'>
+						 tshems dang tshems kyi bar ni shin tu ’byor ||<br />rgyal ba’i mche ba mdzes shing rdul mi mnga’ ||<br />ngang pa’i khyu na ngang pa’i rgyal po ni ||<br />rnam dag dkar zhing rab tu dkar ba bzhin ||&nbsp;</span><span id='8964050bi' class='verse'>
+						 bde bar gshegs pa’i ljags kyis zhal khebs te ||<br />ud pa la dmar po rnam dag zangs kyi mdog |<br />nyi ma ’char tshe nor bu dag mdog bzhin ||<br />sra ba la ring zhing skyon med shin tu yangs ||&nbsp;</span><span id='8964051bi' class='verse'>
+						 gau ta ma’i snyan ni rab tu legs seng ge’i ’gram pa seng ge’i ’jigs med bzhin ||<br />tshangs bcas ’jig rten lha dang mi la yang ||<br />bdag gis gang yang ma thos ma mthong ngo ||&nbsp;</span><span id='8964052bi' class='verse'>
+						 bde gshegs mthu yis mgur na mthong ba ni ||<br /> mgur gyi mid pa gtsang la ’od gsal te ||<br /> drang po dbus su ’gro ba yon po gsal ||<br /> ro yi ro mchog mi dang lha yi lha ||<br />&nbsp;</span><span id='8964053bi' class='verse'>
+						 dpung mgo rab tu zlum zhing thal gong rgyas ||<br /> bdun po mtho ba ’jig rten kun tu grags ||<br /> mgon po mi dbang snying po dpal gyis kyang ||<br /> ri yi rtse la nyi ma ’char ba bzhin ||&nbsp;</span><span id='8964054bi' class='verse'>
+						 mtho ba gnyis ni zhabs kyi mthil nas skyes ||<br /> phyag las gnyis skyes thal gong gnyis skyes te ||<br /> mtho ba gcig ni ltag pa nyid na gcig |<br />dge zhing dag ste ’od gsal rab tu rgyas ||&nbsp;</span><span id='8964055bi' class='verse'>
+						 bcom ldan gau ta ma yi phyag ring ba ||<br /> ji ltar glang po’i rgyal po’i sna bzhin te ||<br /> phyag gnyis po ni ’dud pa ma bgyis par ||<br /> pus mo gnyis su phyag gis rab tu reg |&nbsp;</span><span id='8964056bi' class='verse'>
+						 sku yi ro stod seng ge bzhin du ’phags ||<br />sku ni sred med bu ltar rab tu brtan ||<br /> nyagrodha bzhin chu zheng gab pa’i sku ||<br />bzod pa’i stobs dang ldan pa stobs po che ||&nbsp;</span><span id='8964057bi' class='verse'>
+						 sku yi spu rnams nyas ’khyil gyen du phyogs ||<br /> re reng skyes shing shin tu ’jam pa ste ||<br /> ji ltar pad ma chu dang ’dam mi gos ||<br /> de bzhin rdul dang du bas mi gos so |&nbsp;</span><span id='8964058bi' class='verse'>
+						 rta mchog dul ba yi ni ji lta bar ||<br /> ’doms kyi sba ba spubs su nub ces gda’ ||<br /> brla ni rab zlum smyig ma’i snying po bzhin ||<br /> khyod kyi rje ngar byin gyis rim bzhin mchis ||&nbsp;</span><span id='8964059bi' class='verse'>
+						 zhabs gong dung ltar mtho zhing rting pa che ||<br /> khyod kyi phyag dang zhabs ni dra bas ’brel ||<br /> sor mo ring zhing sor mo nyi shu mnyam ||<br /> sen mo zangs ’dra sor sen me tog can ||&nbsp;</span><span id='8964060bi' class='verse'>
+						 khyod kyi zhabs mthil ’khor lo rab kyis mtshan ||<br /> rtsib ma stong ldan rab tu ’od gsal ba ||<br /> long bus long bu ’thab par mi ’gyur zhing ||<br /> gom pas gom pa sa la yong mi ’dor ||&nbsp;</span><span id='8964061bi' class='verse'>
+						 sa la kun tu sor bzhis mi reg par ||<br /> ’jig rten rnams kyi gtso bo rab gshegs te ||<br /> khyod ni gang du gom pa bor ba yang ||<br /> rin chen pad ma skyes pa ngo mtshar to ||&nbsp;</span><span id='8964062bi' class='verse'>
+						 rgod par ma gyur dal zhing brtan par gshegs ||<br /> stag dang lha dbang ’gros kyis gzhan gnon cing ||<br /> bag tsha med par stabs ni bsgyings te gshegs ||<br /> dpa’ bo khyod kyi ’gros ’dra su la ’ang med ||&nbsp;</span><span id='8964063bi' class='verse'>
+						 mi ma lags pa rnams kyis bar snang las ||<br /> lha yi me tog char ni rab ’bebs shing ||<br /> glu dbyangs sgras ni khyod la mchod par bgyid ||<br /> cho ’phrul ’di ’dra ’di dag rmad du byung ||&nbsp;</span><span id='8964064bi' class='verse'>
+						 khyod kyi gzugs ni rnam thos bu bas lhag | gzi brjid dag ni nyi ma brgya bas ’phags ||<br /> tshangs bcas lha mir bcas pa’i ’jig rten na ||<br /> khyod ’dra ’ang med na lhag pa ga la mchis ||&nbsp;</span><span id='8964065bi' class='verse'>
+						 bdag gis khyod kyi cho ’phrul mchog mthong nas ||<br /> yon tan lhag pa gang dag gzigs gyur na ||<br /> de bzhed pas na mi dbang rab byung snyam ||<br /> bdag ni de la the tshom ’tshal bar gyur ||&nbsp;</span><span id='8964066bi' class='verse'>
+						 de nas bcom ldan ’das kyis khyim bdag tshong dpon bzang skyong la ’di skad ces bka’ stsal to ||&nbsp;</span><span id='8964067bi' class='verse'>
+						 kye ma’o khyim dag ’jig rten gnas pa ’di ni gtse ba bcus gtses par mthong ste |&nbsp;</span><span id='8964068bi' class='verse'>
+						 bcu gang zhe na |&nbsp;</span><span id='8964069bi' class='verse'>
+						 ’di lta ste | skye bas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><div class='kilderef' id='8963333'></div><div class='clear'></div><span id='8963333bi' class='verse'>
+							I had heard about the glory, fame,<br />and splendour of the body of the Victorious One,<br />but you are even more sublime in person,<br />like an image in gold.&nbsp;</span><span id='8963334bi' class='verse'>
+						 Your body is graceful and beautiful.<br />Because of your exalted, golden form<br />you shine among the monks<br />like the moon among the stars.&nbsp;</span><span id='8963335bi' class='verse'>
+						 Never before have I seen the crown of the head of the greatest among men,<br />but now I see it rising up like Mount Meru,<br />like the parasol of the gods,<br />a sign that you have attained the highest degree of transformation.&nbsp;</span><span id='8963336bi' class='verse'>
+						 I see the hair on your head, delicate and supple,<br />shining like a dark sapphire.<br />Its soft curls twist to the right<br />Just like the neck of a peacock.&nbsp;</span><span id='8963337bi' class='verse'>
+						 The best of speakers has a smooth forehead,<br />your eyebrows shaped like rainbows.<br />Between your eyebrows shines a perfect curl of hair<br />blazing like the king of stars.&nbsp;</span><span id='8963338bi' class='verse'>
+						 Your eyes are exquisite, and delight all who look upon them.<br />They are beautiful, beloved by those who gaze upon them.<br />Merely observing is not enough for me,<br />I salute the protector with immaculate eyes.&nbsp;</span><span id='8963339bi' class='verse'>
+						 The nose of the best of men<br />is as magnificent as a golden horn,<br />his lips coral-red like the fruit of the ivy gourd,<br />exceedingly pure like a precious jewel.&nbsp;</span><span id='8963340bi' class='verse'>
+						 Your shining teeth are perfectly white,<br />like lotus-root, cow’s milk, or a crane.<br />Firm, whole, well set, supremely pure,<br />your teeth are an ornament to joyous discipline.&nbsp;</span><span id='8963341bi' class='verse'>
+						 The Victorious One's teeth are well-spaced,<br />the canine teeth shining spotlessly,<br />like the king of the geese, flying first in formation,<br />whiter than white, and completely pure.&nbsp;</span><span id='8963342bi' class='verse'>
+						 Like a pure red lotus, the color of copper,<br />red like the rising sun, the color of a pure jewel,<br />the Sugata’s tongue is delicate and smooth,<br />and so long and broad that it can cover his face.&nbsp;</span><span id='8963343bi' class='verse'>
+						 I have truly never seen or heard of anything<br />in the brahma-world, or in any human or divine realm,<br />like the exquisite ears of Gautama.<br />He has the jaws and the courage of a lion.&nbsp;</span><span id='8963344bi' class='verse'>
+						 By the power of the blissful one, I see his neck,<br /> his pure and resplendent throat, extracting the subtle essence of flavors,<br /> straight, not crooked, and centrally positioned.<br /> His sense of taste is unrivalled, like that of the god of gods and men.&nbsp;</span><span id='8963345bi' class='verse'>
+						 You are broad-chested, and your shoulder blades are round.<br /> Your seven supreme limbs are famed throughout the world.<br /> Blazing with the highest glory, the archetypal king,<br /> you are like the sun rising over the peak of the mountain.&nbsp;</span><span id='8963346bi' class='verse'>
+						 There are protrubrances on the soles of both of your feet,<br /> on both of your hands, and on both shoulders,<br /> and one protrubrance on the back of your neck.<br /> The fullness of your beauty is pure and radiant.&nbsp;</span><span id='8963347bi' class='verse'>
+						 The arms of the Blessed One Gautama hang down,<br /> like the trunk of the lord of elephants.<br /> With both of your hands, you are able<br /> to touch your knees without bending down.&nbsp;</span><span id='8963348bi' class='verse'>
+						 His mighty chest is like that of a lion.<br /> Broad, like the trunk of a banyan tree,<br /> his sturdy body is as strong and firm as that of Nārāyāṇa,<br /> With the strength that comes from forbearance.&nbsp;</span><span id='8963349bi' class='verse'>
+						 The hairs on his upper body curl to the right.<br /> They grow separately, and are very soft.<br /> They are unaffected by dust and smoke,<br /> just like lotuses in muddy water.&nbsp;</span><span id='8963350bi' class='verse'>
+						 Your male organ is said to be retracted in its sheath<br /> like that of an excellent, well-trained horse.<br /> Your well-rounded thighs are like the cores of bamboo.<br /> Your calves are well-formed, with the correct proportions.&nbsp;</span><span id='8963351bi' class='verse'>
+						 You have flat insteps and broad heels.<br /> Your hands and feet are finely webbed.<br /> Your long, smooth fingers and toes number twenty,<br /> with copper colored nails, like flowers.&nbsp;</span><span id='8963352bi' class='verse'>
+						 The symbol of the supreme thousand-spoked wheel<br /> shines from the soles of your feet.<br /> You do not put your feet down hard when you walk on the road. <a class='fotnote cn' name='FN6311cn1' href='#N6311cn1'><sup>1</sup></a>
+<br /> You stride lightly on the earth.&nbsp;</span><span id='8963353bi' class='verse'>
+						 You tread softly, lifting your feet four inches above ground<br /> as you walk, O best of men!<br /> Jeweled lotuses spring forth<br /> wherever you set your feet. How extraordinary!&nbsp;</span><span id='8963354bi' class='verse'>
+						 You advance unopposed, undaunted, repelling your enemies,<br /> like an elephant, like a tiger, like the lord of the gods.<br /> You walk like nothing less than a hero.<br /> Imperturbable, you stride elegantly.&nbsp;</span><span id='8963355bi' class='verse'>
+						 Superhuman beings shower you, lord, with divine flowers.<br /> In the sky, they venerate you<br /> with the sounds of singing.<br /> Such magical displays are truly wondrous.&nbsp;</span><span id='8963356bi' class='verse'>
+						 Your beauty surpasses that of Vaiśramaṇa,<br /> your splendor is like that of a hundred suns.<br /> In the world of brahmans, of gods and men,<br /> you have no equal. Truly, how could anyone be superior?&nbsp;</span><span id='8963357bi' class='verse'>
+						 Having now seen this incredible miracle,<br /> I am filled with curiosity.<br /> What are the superior qualities you have seen,<br /> lord of men, that made you renounce ordinary life?&nbsp;</span><span id='8963358bi' class='verse'>
+						 The Blessed One then said this to the merchant and householder Bhadrapāla:&nbsp;</span><span id='8963359bi' class='verse'>
+						 “Alas! One who is involved with the world is tormented by the ten afflictions.&nbsp;</span><span id='8963360bi' class='verse'>
+						 What are these ten afflictions?&nbsp;</span><span id='8963361bi' class='verse'>
+						 They are the affliction of birth,&nbsp;</span><div style='' id='2' class='note cn'>1.<a class="internt" name='N6311cn1' href='#FN6311cn1'> According to Tibetan and Chinese: ‘You do not strike your ankles against each other when you walk.’</a>&nbsp; </div><div class='clear'></div></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962300bi' class='verse'>
+							jaropadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962654bi' class='verse'>
+							二者老苦逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963008bi' class='verse'>
+							二者老爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963716bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964070bi' class='verse'>
+							rga bas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963362bi' class='verse'>
+							the affliction of old age,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962301bi' class='verse'>
+							vyādhyupadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962655bi' class='verse'>
+							三者病苦逼迫&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963009bi' class='verse'>
+							三者病爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963717bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964071bi' class='verse'>
+							na bas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963363bi' class='verse'>
+							the affliction of disease,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962302bi' class='verse'>
+							maraṇopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962656bi' class='verse'>
+							四者死苦逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963010bi' class='verse'>
+							四者死爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963718bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964072bi' class='verse'>
+							’chi bas gtso ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963364bi' class='verse'>
+							the affliction of death,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962303bi' class='verse'>
+							śokopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962657bi' class='verse'>
+							五者愁苦逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963011bi' class='verse'>
+							五者憂爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963719bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964073bi' class='verse'>
+							mya ngan gyis gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963365bi' class='verse'>
+							the affliction of sorrow,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962304bi' class='verse'>
+							paridevopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962658bi' class='verse'>
+							六者怨恨逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963012bi' class='verse'>
+							六者悲爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963720bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964074bi' class='verse'>
+							smre sngags ’don pas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963366bi' class='verse'>
+							the affliction of lamentation,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962305bi' class='verse'>
+							duḥkhopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962659bi' class='verse'>
+							七者苦受逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963013bi' class='verse'>
+							七者苦爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963721bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964075bi' class='verse'>
+							sdug bsngal gyis gtso ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963367bi' class='verse'>
+							the affliction of suffering,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962306bi' class='verse'>
+							daurmanasyopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962660bi' class='verse'>
+							八者憂受逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963014bi' class='verse'>
+							八者煩惱爲嬈亂&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963722bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964076bi' class='verse'>
+							yid mi bde bas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963368bi' class='verse'>
+							the affliction of depression,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962307bi' class='verse'>
+							upāyāsopadraveṇa |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962661bi' class='verse'>
+							九者痛惱逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963015bi' class='verse'>
+							九者愁歎爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963723bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964077bi' class='verse'>
+							’khrug pas gtse ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963369bi' class='verse'>
+							the affliction of grief,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962308bi' class='verse'>
+							saṃsāropadraveṇaiva daśamena&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962662bi' class='verse'>
+							十者生死流轉大苦之所逼迫。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963016bi' class='verse'>
+							十者輪迴爲嬈亂。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963724bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964078bi' class='verse'>
+							’khor bas gtso bo dang bcu ste |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963370bi' class='verse'>
+							and the affliction of cyclic existence.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962309bi' class='verse'>
+							ebhir gṛhapate daśabhir upadrutaṃ lokasanniveśaṃ dṛṣṭvā anuttarāṃ samyaksaṃbodhiṃ lapsyāmīti śraddhayā ’gārād anagārikāṃ pravrajitaḥ ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8962271";
+							kilderef = "Bspṭ San Ms  2b2 - San Ms 3a7";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962663bi' class='verse'>
+							長者。我見如是十種苦事逼迫衆生。爲得阿耨多羅三藐三菩提。出離如是逼迫事故。以淨信心捨釋氏家趣無上道。&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8962625";
+							kilderef = "Bspṭ Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645)  195c2 - Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645) 196a196";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963017bi' class='verse'>
+							如是十種諸嬈亂法。世間合集我見是已。是故我乃淨信出家。趣證阿耨多羅三藐三菩提果&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8962979";
+							kilderef = "Bspṭ Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058)  781c5 - Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058) 782b02";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963725bi' class='verse'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8963687";
+							kilderef = "Bspṭ Tib Dunhuang Pelliot 977  - Tib Dunhuang Pelliot 977 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964079bi' class='verse'>
+							khyim bdag ’jig rten gnas pa gtse <a class='fotnote cn' name='FN6313cn1' href='#N6313cn1'><sup>1</sup></a>
+ ba ’di bcus gtses par mthong nas | bla na med pa yang dag par rdzogs pa’i byang chub thob par bya’o zhes dad pas khyim nas khyim med par rab tu byung ngo ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8964041";
+							kilderef = "Bspṭ Tib Kg dkon brtsegs kha  257a5 - Tib Kg dkon brtsegs kha 258b3";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					<div style='' id='3' class='note cn'>1.<a class="internt" name='N6313cn1' href='#FN6313cn1'> D gtso</a>&nbsp; </div><div class='clear'></div></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963371bi' class='verse'>
+							Householder, when I saw that one who is involved with the world is tormented by these ten afflictions, I decided to attain unsurpassed perfect awakening, and with that conviction I left ordinary household life behind and became a renunciant.”&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8963333";
+							kilderef = "Bspṭ Eng  - Eng ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=5206a1f6-607b-11e2-b349-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

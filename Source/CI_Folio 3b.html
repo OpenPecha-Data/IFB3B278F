@@ -1,0 +1,594 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1178' accesskey='1'>RK: Bodhisatvapiṭaka</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>RK: Bodhisatvapiṭaka<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6308]" value="6308" id="lancheckbox" checked >Sanskrit: San Ms</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6309]" value="6309" id="lancheckbox" checked >Chinese: Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6310]" value="6310" id="lancheckbox" checked >Chinese: Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6312]" value="6312" id="lancheckbox" checked >Tibetan: Tib Dunhuang Pelliot 977</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6313]" value="6313" id="lancheckbox" checked >Tibetan: Tib Kg dkon brtsegs kha</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1178[6311]" value="6311" id="lancheckbox" checked >English: Eng</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1178">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1178">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1178'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1178">Search in RK: Bodhisatvapiṭaka</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1178'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1178'>RK: Bodhisatvapiṭaka</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="154731.Title|154732.Preface|154733.Chapter1:Gṛhapati|154743.Chapter2:Kimbhīrayakṣa|154744.Chapter3:Bodhisatvaparīkṣā|154745.Chapter4:Tathāgatācintya|154746.Chapter5:Caturbrahmavihāra|154747.Chapter6:Dānapāramitā|154748.Chapter7:Śīlapāramitā|154749.Chapter8:Kṣāntipāramitā|154750.Chapter9:Vīryapāramitā|154751.Chapter10:Dhyānapāramitā|154752.Chapter11:Prajñāpāramitā|154753.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154731.Title" border=0 hspace=2><a id="href_154731.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993269&level=1&cid=877711" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154732.Preface" border=0 hspace=2><a id="href_154732.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993270&level=1&cid=877712" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('154733.Chapter1:Gṛhapati','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_154733.Chapter1:Gṛhapati" border=0 hspace=2><a id="href_154733.Chapter1:Gṛhapati" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993271&level=1&cid=877713" class="ajax_tree0">Chapter 1: Gṛhapati
+</td></tr></table>
+<div style="display:none;"  id="div_154733.Chapter1:Gṛhapati">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154734.Folio2a" border=0 hspace=2><a id="href_154734.Folio2a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993287&level=2&cid=877717" class="ajax_tree1">Folio 2a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154735.Folio2b" border=0 hspace=2><a id="href_154735.Folio2b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993304&level=2&cid=877720" class="ajax_tree1">Folio 2b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154736.Folio3a" border=0 hspace=2><a id="href_154736.Folio3a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993315&level=2&cid=877722" class="ajax_tree1">Folio 3a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154737.Folio3b" border=0 hspace=2><a id="href_154737.Folio3b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993354&level=2&cid=877733" class="ajax_tree1">Folio 3b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154738.Folio4a" border=0 hspace=2><a id="href_154738.Folio4a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993386&level=2&cid=877765" class="ajax_tree1">Folio 4a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154739.Folio4b" border=0 hspace=2><a id="href_154739.Folio4b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993430&level=2&cid=877809" class="ajax_tree1">Folio 4b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154740.Folio5a" border=0 hspace=2><a id="href_154740.Folio5a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993480&level=2&cid=877859" class="ajax_tree1">Folio 5a
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154741.Folio5b" border=0 hspace=2><a id="href_154741.Folio5b" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993494&level=2&cid=877873" class="ajax_tree1">Folio 5b
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154742.Folio6a" border=0 hspace=2><a id="href_154742.Folio6a" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993505&level=2&cid=877875" class="ajax_tree1">Folio 6a
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154743.Chapter2:Kimbhīrayakṣa" border=0 hspace=2><a id="href_154743.Chapter2:Kimbhīrayakṣa" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993552&level=1&cid=877882" class="ajax_tree0">Chapter 2: Kimbhīrayakṣa
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154744.Chapter3:Bodhisatvaparīkṣā" border=0 hspace=2><a id="href_154744.Chapter3:Bodhisatvaparīkṣā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993554&level=1&cid=877884" class="ajax_tree0">Chapter 3: Bodhisatvaparīkṣā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154745.Chapter4:Tathāgatācintya" border=0 hspace=2><a id="href_154745.Chapter4:Tathāgatācintya" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993556&level=1&cid=877886" class="ajax_tree0">Chapter 4: Tathāgatācintya
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154746.Chapter5:Caturbrahmavihāra" border=0 hspace=2><a id="href_154746.Chapter5:Caturbrahmavihāra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993558&level=1&cid=877888" class="ajax_tree0">Chapter 5: Caturbrahmavihāra
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154747.Chapter6:Dānapāramitā" border=0 hspace=2><a id="href_154747.Chapter6:Dānapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993561&level=1&cid=877890" class="ajax_tree0">Chapter 6: Dānapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154748.Chapter7:Śīlapāramitā" border=0 hspace=2><a id="href_154748.Chapter7:Śīlapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993563&level=1&cid=877892" class="ajax_tree0">Chapter 7: Śīlapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154749.Chapter8:Kṣāntipāramitā" border=0 hspace=2><a id="href_154749.Chapter8:Kṣāntipāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993565&level=1&cid=877894" class="ajax_tree0">Chapter 8: Kṣāntipāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154750.Chapter9:Vīryapāramitā" border=0 hspace=2><a id="href_154750.Chapter9:Vīryapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993567&level=1&cid=877896" class="ajax_tree0">Chapter 9: Vīryapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154751.Chapter10:Dhyānapāramitā" border=0 hspace=2><a id="href_154751.Chapter10:Dhyānapāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993569&level=1&cid=877898" class="ajax_tree0">Chapter 10: Dhyānapāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154752.Chapter11:Prajñāpāramitā" border=0 hspace=2><a id="href_154752.Chapter11:Prajñāpāramitā" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993576&level=1&cid=877905" class="ajax_tree0">Chapter 11: Prajñāpāramitā
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_154753.Colophon" border=0 hspace=2><a id="href_154753.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1178&mid=1993612&level=1&cid=877941" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('154737.Folio3b|154733.Chapter1:Gṛhapati|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1178&amp;mid=1993354&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178&amp;cid=877733&amp;mid=1993354&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1178&amp;cid=877733&amp;mid=1993354&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><div class='kilderef' id='8962310'></div><div class='clear'></div><span id='8962310bi' class='verse'>
+							atha khalu punas tasyāṃ velāyām ime gāthe abhāṣata ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><div class='kilderef' id='8962664'></div><div class='clear'></div><span id='8962664bi' class='verse'>
+							爾時世尊。欲重宣此義。而説頌曰&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><div class='kilderef' id='8963018'></div><div class='clear'></div><span id='8963018bi' class='verse'>
+							爾時世尊欲重宣此義而説偈言&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><div class='kilderef' id='8963726'></div><div class='clear'></div><span id='8963726bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><div class='kilderef' id='8964080'></div><div class='clear'></div><span id='8964080bi' class='verse'>
+							bcom ldan ’das kyis de’i tshe tshigs su bcad pa ’di dag gsungs so ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><div class='kilderef' id='8963372'></div><div class='clear'></div><span id='8963372bi' class='verse'>
+							He then went on to speak these verses:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962311bi' class='verse'>
+							saṃsārapaṃjare ruddhān sarvabālapṛthagjanān* |<br /> jātyā upadrutān dṛṣṭvā jarāvyādhiprapīḍitān ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962665bi' class='verse'>
+							我觀諸凡夫　閉流轉牢獄<br />常爲生老病　衆苦所逼迫&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963019bi' class='verse'>
+							諸愚夫異生　輪迴網羈絆<br /> 生嬈亂愁歎　老病旋逼逐&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963727bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964081bi' class='verse'>
+							’khor ba’i sgrom du chud pa yi ||<br /> byis pa so so’i skye bo kun ||<br /> skye bas nye bar gtse ba dang ||<br /> na dang rga bas rab tu gzir ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963373bi' class='verse'>
+							I saw that all immature, ordinary people<br /> are trapped in the cage of cyclic existence,<br /> that they are tormented by birth,<br /> harassed by old age and disease.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962312bi' class='verse'>
+							śokanti paridevanti maraṇasya vaśaṃgatān |<br /> niṣkrāntas trāyaṇārthāya mociṣye bhavapaṃjarāt* ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962666bi' class='verse'>
+							愁憂及怨恨　死苦等所牽<br /> 爲除牢獄怖　令欣出離法&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963020bi' class='verse'>
+							憂悲故苦惱　死法來呑食<br /> 若救度出離　解脱三有網&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963728bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964082bi' class='verse'>
+							mya ngan byed cing smre sngags ’don ||<br /> ’chi ba’i dbang du song mthong nas ||<br /> srid pa’i sgrom las thar bya zhes ||<br /> bskyab pa’i phyir ni mngon par byung ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963374bi' class='verse'>
+							They experience pain, they grieve.<br /> I left in order to protect<br /> those who are under the sway of death.<br /> I will free them from the cage of existence.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962313bi' class='verse'>
+							vidviṣṭaṃ batedaṃ gṛhapate lokasanniveśaṃ dṛṣṭvā anyonyapratighātakaṃ daśabhir āghātavastubhiḥ&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962667bi' class='verse'>
+							復次長者。我觀世間一切衆生。爲十惱害互相憎嫉。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963021bi' class='verse'>
+							復次長者。瞋之一法互相損害世間合集。斯苦甚大。損害有十。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963729bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964083bi' class='verse'>
+							kye ma’o khyim bdag ’jig rten gnas pa ’di ni zhe sdang zhing kun nas mnar sems kyi dngos po bcus gcig la gcig mnar sems su byed par mthong ste ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963375bi' class='verse'>
+							“Alas householder! I have seen the hatred caused by ten situations which lead to malice that make those who are involved with the world fight among themselves.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962314bi' class='verse'>
+							katamair daśabhir yad idaṃ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962668bi' class='verse'>
+							何謂爲十。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963022bi' class='verse'>
+							何等爲十。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963730bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964084bi' class='verse'>
+							bcu gang zhe na | ’di lta ste |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963376bi' class='verse'>
+							What are these ten situations which lead to malice?&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962315bi' class='verse'>
+							ātmano me ’narthaḥ kṛta utpadyate cetasa āghātaḥ&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962669bi' class='verse'>
+							一者曾於我身作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963023bi' class='verse'>
+							一者以我心故。過去已作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963731bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964085bi' class='verse'>
+							bdag nyid la gnod pa byas zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963377bi' class='verse'>
+							They are the malicious intent that arises when one thinks “I have been treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962316bi' class='verse'>
+							anarthaṃ karoty utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962670bi' class='verse'>
+							二者今於我身作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963024bi' class='verse'>
+							二者生起思念。現在今作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963732bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964086bi' class='verse'>
+							gnod pa byed do || zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963378bi' class='verse'>
+							the malicious intent that arises when one thinks “I am being treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962317bi' class='verse'>
+							anarthaṃ kariṣyaty utpadyate cetasa āghātaḥ&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962671bi' class='verse'>
+							三者當於我身作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963025bi' class='verse'>
+							三者生起思念。未來當作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963733bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964087bi' class='verse'>
+							gnod pa byed par ’gyur ro || zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963379bi' class='verse'>
+							the malicious intent that arises when one thinks “I will be treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962318bi' class='verse'>
+							priyasya me ’narthaḥ kṛta utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962672bi' class='verse'>
+							四者曾於我之所愛作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963026bi' class='verse'>
+							四者我所愛者生起思念。而不已作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963734bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964088bi' class='verse'>
+							bdag gi mdza’ bo la gnod pa byas so || zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963380bi' class='verse'>
+							the malicious intent that arises when one thinks “my loved one has been treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962319bi' class='verse'>
+							priyasya me ’narthaṃ karoty utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962673bi' class='verse'>
+							五者今於我之所愛作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963027bi' class='verse'>
+							五者我所愛者生起思念。而不今作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963735bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964089bi' class='verse'>
+							bdag gi mdza’ bo la gnod pa byed do ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963381bi' class='verse'>
+							the malicious intent that arises when one thinks “my loved one is being treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962320bi' class='verse'>
+							priyasya me anarthaṃ kariṣyaty utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962674bi' class='verse'>
+							六者當於我之所愛作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963028bi' class='verse'>
+							六者我所愛者生起思念。而不當作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963736bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964090bi' class='verse'>
+							zhes sems la kun nas mnar sems skye ba dang bdag gi mdza’ bo la gnod pa byed par ’gyur ro ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963382bi' class='verse'>
+							the malicious intent that arises when one thinks “my loved one will be treated unjustly”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962321bi' class='verse'>
+							apriyasya me ’rthaḥ kṛta utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962675bi' class='verse'>
+							七者曾於我所不愛而作饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963029bi' class='verse'>
+							七者非我愛者生起思念。過去已作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963737bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964091bi' class='verse'>
+							zhes sems la kun nas mnar sems skye ba dang bdag dang mi mdza’ ba’i don byas so zhes sems la kun nas mnar sems skye ba dang ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963383bi' class='verse'>
+							the malicious intent that arises when one thinks “my enemy has gained an advantage”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962322bi' class='verse'>
+							apriyasya me ’rthaṃ karoty utpadyate cetasa āghātaḥ&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962676bi' class='verse'>
+							八者今於我所不愛而作饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963030bi' class='verse'>
+							八者非我愛者生起思念。現在今作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963738bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964092bi' class='verse'>
+							bdag dang mi mdza’ ba’i don byed do zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963384bi' class='verse'>
+							the malicious intent that arises when one thinks “my enemy is gaining an advantage”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962323bi' class='verse'>
+							apriyasya me arthaṃ kariṣyaty utpadyate cetasa āghātaḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962677bi' class='verse'>
+							九者當於我所不愛而作饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963031bi' class='verse'>
+							九者非我愛者生起思念。未來當作諸損害事。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963739bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964093bi' class='verse'>
+							bdag dang mi mdza’ ba’i don byed par ’gyur ro zhes sems la kun nas mnar sems skye ba dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963385bi' class='verse'>
+							the malicious intent that arises when one thinks “my enemy will gain an advantage”,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962324bi' class='verse'>
+							anarthapradoṣenaiva daśamena&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962678bi' class='verse'>
+							十者於諸過失作不饒益。心生惱害。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963032bi' class='verse'>
+							十者生起思念。作無義利損害過失。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963740bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964094bi' class='verse'>
+							gnod pa’i rab tu sdang ba nyid dang bcu’o ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963386bi' class='verse'>
+							as well as unjustified rage.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962325bi' class='verse'>
+							ebhir gṛhapate daśabhir āghātavastubhiḥ sarvā āghātavigatā anuttarāṃ samyaksaṃbodhiṃ prāpsyāmīti śraddhayā agārād anagārikāṃ pravrajitaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962679bi' class='verse'>
+							長者我見如是十種惱害。惱害世間一切衆生。爲得阿耨多羅三藐三菩提。出離如是惱害事故。以淨信心捨釋氏家趣無上道。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963033bi' class='verse'>
+							如是十種諸損害事世間合集。我見是已。爲令離彼諸損害故。是故我乃淨信出家。趣證阿耨多羅三藐三菩提果&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963741bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964095bi' class='verse'>
+							khyim bdag kun nas mnar sems kyi dngos po bcu po ni de dag yin te || kun nas mnar sems thams cad sel ba bla na med pa yang dag par rdzogs pa’i byang chub thob par bya’o || zhes dad pas khyim nas khyim med par rab tu byung ngo ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963387bi' class='verse'>
+							Householder, it was in order to get rid of all malice, caused by these ten situations that lead to malice, that I decided to attain unsurpassed perfect awakening, and with that conviction I left ordinary household life behind and became a renunciant.”&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962326bi' class='verse'>
+							atha khalu bhagavān imam evārthaṃ prarūpayaṃs tasyāṃ velāyām imā gāthā abhāṣata ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962680bi' class='verse'>
+							爾時世尊。欲重宣此義。而説頌曰&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963034bi' class='verse'>
+							爾時世尊重説偈言&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963742bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964096bi' class='verse'>
+							de nas bcom ldan ’das kyis don de nyid rab tu bstan pa’i phyir de’i tshe tshigs su bcad pa ’di dag gsungs so ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963388bi' class='verse'>
+							Then, in order to expand on this point, the Blessed One went on to speak these verses:&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962327bi' class='verse'>
+							vidviṣṭā bata me satvā anyam anye parasparaṃ '<br /> prāptā āghātānāṃ sarve daśa āghātavastubhiḥ ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962681bi' class='verse'>
+							衆生互憎嫉　皆由十惱生&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963035bi' class='verse'>
+							衆生瞋最大　各各互相害<br /> 已現當損害　成十損害事&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963743bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964097bi' class='verse'>
+							kye ma’o sems can zhe sdang ste ||<br /> gcig la gcig ni phan tshun du ||<br /> kun nas mnar sems dngos po bcus ||<br /> kun la kun nas mnar sems gyur ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963389bi' class='verse'>
+							Alas, sentient beings<br /> relate to one another with anger,<br /> and all their malice<br /> stems from the ten kinds of malice.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962328bi' class='verse'>
+							mama samajñātīnām anarthaḥ kṛtaḥ kariṣyati '<br /> karoti ca {'} anarthāni āghātas tasya jāyate ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962682bi' class='verse'>
+							於我及我親　三世倶惱害&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963036bi' class='verse'>
+							愛者不生害　已作及當作<br /> 現作亦復然　不成損害法&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963744bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964098bi' class='verse'>
+							bdag dang bdag gi nye du la ||<br /> gnod par byas dang byed pa dang ||<br /> gnod pa byed par ’gyur ro zhes ||<br /> de yi kun nas mnar sems skye ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963390bi' class='verse'>
+							“I or my relatives<br /> were treated unjustly, will be treated unjustly,<br /> are being treated unjustly.”<br /> This gives rise to malice.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962329bi' class='verse'>
+							ye ca mama amitrāṇi teṣām arthaḥ prakurvvati '<br /> kṛtaṃ kariṣyate caiva āghātas tasya jāyate ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962683bi' class='verse'>
+							或於我非親　起諸饒益相<br /> 怨憎由此生　三世倶惱害&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963037bi' class='verse'>
+							於我非友愛　作諸損害事<br /> 已現當亦然　生損害罪業&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963745bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964099bi' class='verse'>
+							gang rnams bdag dang mi mdza’ ba ||<br /> de dag gi ni don byas dang ||<br /> byed do byed par ’gyur ro zhes ||<br /> de yi kun nas mnar sems skye ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963391bi' class='verse'>
+							“Those who are not my friends,<br /> are receiving benefits,<br /> have received them, will receive them.”<br /> This gives rise to malice.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962330bi' class='verse'>
+							anarthadoṣo daśama āghāto yena vardhate '<br /> taṃ ca dṛṣṭvā pravrajīta āghātena anarthikaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962684bi' class='verse'>
+							第十諸過失　生長怨憎苦<br /> 我觀如是過　厭患故出家&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963038bi' class='verse'>
+							并無義過失　十損害纒縛<br /> 我見損害法　乃淨信出家&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963746bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964100bi' class='verse'>
+							gnod pa’i sdang dang bcu yin de ||<br /> gang gis mnar sems ’phel ’gyur ba ||<br /> de mthong kun nas mnar sems rnams ||<br /> mi ’dod pas na rab tu byung ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963392bi' class='verse'>
+							Unjustified rage is the tenth way<br /> in which malice spreads.<br /> I saw all this, and then left behind<br /> the senselessness created by malice.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962331bi' class='verse'>
+							nānādṛṣṭikṛtaṃ kudṛṣṭigahanapraskannaṃ batemaṃ | gṛhapate lokasanniveśaṃ dṛṣṭvā daśabhir dṛṣṭikṛtakuḍṛṣṭigahanaiḥ |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962685bi' class='verse'>
+							復次長者。我觀世間一切衆生。入於十種惡見稠林。由異見故不能自出。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963039bi' class='verse'>
+							復次長者。種種見中諸險惡見。世間合集斯苦甚大。險惡見者。有其十種。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963747bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964101bi' class='verse'>
+							kye ma’o khyim bdag ’jig rten gnas pa ’di ni lta bar byas pa lta ba ngan pa thibs po bcus lta bar byas pa sna tshogs dang | lta ba ngan pa (5) thibs po dag gis non par mthong ste ||&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963393bi' class='verse'>
+							“Alas householder! I have seen that one who is involved with the world is lost in the thicket of dogmatic views and mistaken beliefs due to being ensnared by ten mistaken views and beliefs.&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962332bi' class='verse'>
+							katamair daśabhir yad idam ātmadṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962686bi' class='verse'>
+							何謂爲十。一者我見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963040bi' class='verse'>
+							何等爲十。一者於我見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963748bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964102bi' class='verse'>
+							bcu gang zhe na | ’di lta ste | bdag tu lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963394bi' class='verse'>
+							What are these ten beliefs? They are the mistaken belief in a self,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962333bi' class='verse'>
+							satvadṛṣṭigatakudṛṣṭigahanena&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962687bi' class='verse'>
+							二者有情見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963041bi' class='verse'>
+							二者衆生見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963749bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964103bi' class='verse'>
+							sems can du lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963395bi' class='verse'>
+							the mistaken belief in a being,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962334bi' class='verse'>
+							jīvadṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962688bi' class='verse'>
+							三者壽命見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963042bi' class='verse'>
+							三者壽者見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963750bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964104bi' class='verse'>
+							srog tu lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963396bi' class='verse'>
+							the mistaken belief in a soul,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962335bi' class='verse'>
+							pudgaladṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962689bi' class='verse'>
+							四者數取趣見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963043bi' class='verse'>
+							四者於人見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963751bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964105bi' class='verse'>
+							gang zag tu lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963397bi' class='verse'>
+							the mistaken belief in a person,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962336bi' class='verse'>
+							ucchedadṛṣṭigatakudṛṣṭigahanena |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962690bi' class='verse'>
+							五者斷見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963044bi' class='verse'>
+							五者於斷見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963752bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964106bi' class='verse'>
+							chad par lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963398bi' class='verse'>
+							the mistaken belief in annihilation,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962337bi' class='verse'>
+							śāśvatadṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962691bi' class='verse'>
+							六者常見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963045bi' class='verse'>
+							六者於常見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963753bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964107bi' class='verse'>
+							rtag par lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963399bi' class='verse'>
+							the mistaken belief in eternity,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962338bi' class='verse'>
+							akriyādṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962692bi' class='verse'>
+							七者無作見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963046bi' class='verse'>
+							七者無作見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963754bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964108bi' class='verse'>
+							bya ba med par lta bar gyur pa lta ba ngan pa thibs pa dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963400bi' class='verse'>
+							the mistaken belief that there is no action,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962339bi' class='verse'>
+							ahetudṛṣṭigatakudṛṣṭigahanena |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962693bi' class='verse'>
+							八者無因見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963047bi' class='verse'>
+							八者無因見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963755bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964109bi' class='verse'>
+							rgyu med par lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963401bi' class='verse'>
+							the mistaken belief that there is no causality,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962340bi' class='verse'>
+							viṣamahetudṛṣṭigatakudṛṣṭigahanena '&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962694bi' class='verse'>
+							九者不平等因見惡見稠林。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963048bi' class='verse'>
+							九者不平等見中起險惡見。&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963756bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964110bi' class='verse'>
+							mi ’thun pa’i rgyur lta bar gyur pa lta ba ngan pa thibs po dang |&nbsp;</span></div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963402bi' class='verse'>
+							the mistaken belief that actions have no consequences,&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'><div class='Sanskrit'><span id='8962341bi' class='verse'>
+							mithyādṛṣṭi[gata]kudṛṣṭigahanena daśamena '&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8962310";
+							kilderef = "Bspṭ San Ms  3b1 - San Ms 7";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8962695bi' class='verse'>
+							十者邪見惡見稠林。&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8962664";
+							kilderef = "Bspṭ Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645)  196b01 - Chi T.310 (12) (Xuánzàng 玄奘, A.D. 645) c06";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Chinese'><span id='8963049bi' class='verse'>
+							十者於邪見中起險惡見。&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8963018";
+							kilderef = "Bspṭ Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058)  782b05 - Chi T.316 (Dharmarakṣa 法護, A.D. 1018-1058) c11";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8963757bi' class='verse'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8963726";
+							kilderef = "Bspṭ Tib Dunhuang Pelliot 977  - Tib Dunhuang Pelliot 977 ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='Tibetan'><span id='8964111bi' class='verse'>
+							log par lta bar gyur pa lta ba ngan pa’i thibs po dang bcu’o ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8964080";
+							kilderef = "Bspṭ Tib Kg dkon brtsegs kha  258b3 - Tib Kg dkon brtsegs kha 259a7";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:15.666666666667%;'><div class='English'><span id='8963403bi' class='verse'>
+							and the mistaken belief in false doctrines.&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8963372";
+							kilderef = "Bspṭ Eng  - Eng ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div><div class='textvar' style='width:15.666666666667%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=40af4223-6135-11e2-b349-001cc4ddf0f4</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
